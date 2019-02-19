@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>404 Not Found Story Share</title>
-  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <style>
     body {
       margin: 0;
@@ -13,40 +11,14 @@
     .not-found-link {
       position: absolute;
       left: 50%; top: 50%;
-      margin: -250px 0 0 -138px;
-      width: 277px;
-      height: 440px;
-      background: 0 100px url('/404.png') no-repeat;
-    }
-    .link-text {
-      position: absolute;
-      top: 40px;
-      left: 45px;
-      font-family: Gloria Hallelujah, cursive;
-      font-size: 24px;
-      color: #52385b;
-    }
-    .link-status {
-      position: absolute;
-      top: -20px;
-      left: 100px;
-      font-family: Gloria Hallelujah, cursive;
-      font-size: 45px;
-      color: #52385b;
+      margin: -270px 0 0 -139px;
+      width: 278px;
+      height: 459px;
+      background: url('404.png') no-repeat;
     }
   </style>
 </head>
 <body>
-  <a class="not-found-link" href="home#0">
-    <span class="link-status" th:text="${#response.getStatus()}"></span><br>
-    <span class="link-text">just go home <i class="fas fa-home"></i></span>
-  </a>
+  <a class="not-found-link" href="https://vk.com/"></a>
 </body>
-<script>
-    addEventListener("load", function() {
-        setTimeout(function () {
-            window.location = "/home#0";
-        }, 5000)
-    });
-</script>
 </html>
