@@ -18,21 +18,17 @@ import java.net.UnknownHostException;
 @Slf4j
 @Component
 public class WebSocketManager implements ServletContextListener {
-//    @Value("${rt-server.host}")
-//    private String host;
-//    @Value("${rt-server.port}")
-//    private Integer port;
+    @Value("${rt-server.host}")
+    private String host;
+    @Value("${rt-server.port}")
+    private Integer port;
     @Autowired
     private MessageService messageService;
 
     public void contextInitialized(ServletContextEvent sce) {
         Configuration config = new Configuration();
-        config.setHostname("story-share.herokuapp.com");
-        config.setPort(8181);
-
-//        config.setHostname("localhost");
-//        config.setPort(8181);
-
+        config.setHostname(host);
+        config.setPort(port);
         final SocketIOServer server = new SocketIOServer(config);
 
         try {
